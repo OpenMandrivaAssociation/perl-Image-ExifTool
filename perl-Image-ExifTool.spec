@@ -19,7 +19,6 @@ BuildRequires:  perl-devel
 Obsoletes:  Image-ExifTool
 Provides:   Image-ExifTool
 BuildArch:  noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 ExifTool provides an extensible set of perl modules to read and write meta
