@@ -1,6 +1,6 @@
 %define module  Image-ExifTool
 %define name    perl-%{module}
-%define version 7.50
+%define version 7.51
 %define release %mkrel 1
 %define epoch   1
 
