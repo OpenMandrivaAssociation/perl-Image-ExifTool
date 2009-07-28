@@ -1,25 +1,24 @@
-%define module  Image-ExifTool
-%define name    perl-%{module}
-%define version 7.82
-%define release %mkrel 1
-%define epoch   1
+%define upstream_name    Image-ExifTool
+%define upstream_version 7.82
 
-Name:       %{name}
-Version:    %{version}
-Release:    %{release} 
-Epoch:      %{epoch}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+Epoch:      1
+
 Summary:    Read and write meta information
 License:    GPL
 Group:      Development/Perl
-URL:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/Image/%{module}-%{version}.tar.bz2
+URL:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Image/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:  perl-devel
 %endif
+BuildArch:  noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 Obsoletes:  Image-ExifTool
 Provides:   Image-ExifTool
-BuildArch:  noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 ExifTool provides an extensible set of perl modules to read and write meta
@@ -29,7 +28,7 @@ Casio, FujiFilm, JVC/Victor, Kodak, Leaf, Minolta/Konica-Minolta, Nikon,
 Olympus/Epson, Panasonic/Leica, Pentax/Asahi, Ricoh, Sanyo and Sigma/Foveon.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -51,5 +50,3 @@ rm -rf %{buildroot}
 %{_mandir}/*/*
 %{perl_vendorlib}/Image
 %{perl_vendorlib}/File
-
-
