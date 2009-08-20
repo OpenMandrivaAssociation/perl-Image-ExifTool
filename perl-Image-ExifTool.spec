@@ -1,5 +1,5 @@
 %define upstream_name    Image-ExifTool
-%define upstream_version 7.82
+%define upstream_version 7.89
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -10,7 +10,7 @@ Summary:    Read and write meta information
 License:    GPL
 Group:      Development/Perl
 URL:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Image/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:    http://www.cpan.org/modules/by-module/Image/%{upstream_name}-%{upstream_version}.tar.gz
 
 %if %{mdkversion} < 1010
 BuildRequires:  perl-devel
