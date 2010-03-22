@@ -1,5 +1,5 @@
 %define upstream_name    Image-ExifTool
-%define upstream_version 8.10
+%define upstream_version 8.15
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
