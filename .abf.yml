@@ -1,2 +1,4 @@
+removed_sources:
+  Image-ExifTool-8.60.tar.gz: 17bd4eba2191ca274abcad084211ae727240ebd7
 sources:
-  "Image-ExifTool-8.60.tar.gz": 17bd4eba2191ca274abcad084211ae727240ebd7
+  Image-ExifTool-9.27.tar.gz: 26f0f67e902231619f19350431567f9554a1abbd
