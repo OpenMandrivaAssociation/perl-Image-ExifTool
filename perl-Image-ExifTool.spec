@@ -1,5 +1,5 @@
 %define modname	Image-ExifTool
-%define modver 9.27
+%define modver 9.46
 
 Summary:	Read and write meta information
 Name:		perl-%{modname}
@@ -40,5 +40,6 @@ make test
 %{perl_vendorlib}/File
 %{_mandir}/man1/*
 %{_mandir}/man3/*
+
 
 
