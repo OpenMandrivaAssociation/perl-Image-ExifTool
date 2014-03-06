@@ -1,5 +1,5 @@
 %define modname	Image-ExifTool
-%define modver 9.46
+%define modver 9.53
 
 Summary:	Read and write meta information
 Name:		perl-%{modname}
@@ -9,7 +9,7 @@ Release:	1
 License:	GPLv2
 Group:		Development/Perl
 Url:	http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Image/Image-ExifTool-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Image/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 Provides:	Image-ExifTool
@@ -40,6 +40,7 @@ make test
 %{perl_vendorlib}/File
 %{_mandir}/man1/*
 %{_mandir}/man3/*
+
 
 
 
