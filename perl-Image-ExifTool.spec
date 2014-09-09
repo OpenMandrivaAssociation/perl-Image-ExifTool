@@ -1,12 +1,12 @@
 %define modname	Image-ExifTool
-%define modver 9.60
+%define modver 9.70
 
 Summary:	Read and write meta information
 
 Name:		perl-%{modname}
 Epoch:		1
 Version:	%perl_convert_version %{modver}
-Release:	3
+Release:	1
 License:	GPLv2
 Group:		Development/Perl
 Url:	http://search.cpan.org/dist/%{modname}
@@ -41,8 +41,3 @@ make test
 %{perl_vendorlib}/File
 %{_mandir}/man1/*
 %{_mandir}/man3/*
-
-
-
-
-
