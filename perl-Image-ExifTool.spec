@@ -1,12 +1,12 @@
 %define modname	Image-ExifTool
-%define modver 9.70
+%define modver 9.76
 
 Summary:	Read and write meta information
 
 Name:		perl-%{modname}
 Epoch:		1
 Version:	%perl_convert_version %{modver}
-Release:	3
+Release:	1
 License:	GPLv2
 Group:		Development/Perl
 Url:	http://search.cpan.org/dist/%{modname}
@@ -26,7 +26,7 @@ Olympus/Epson, Panasonic/Leica, Pentax/Asahi, Ricoh, Sanyo and Sigma/Foveon.
 %setup -qn %{modname}-%{modver}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make CFLAGS="%{optflags}} -DENGLISH"
 
 %check
