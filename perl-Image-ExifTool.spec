@@ -1,5 +1,5 @@
 %define modname	Image-ExifTool
-%define modver 9.76
+%define modver 11.01
 
 Summary:	Read and write meta information
 

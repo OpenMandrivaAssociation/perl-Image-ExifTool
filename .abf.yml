@@ -5,5 +5,6 @@ removed_sources:
   Image-ExifTool-9.53.tar.gz: 01921906c864f12fa9345c5ec12ba2e97ff1287b
   Image-ExifTool-9.60.tar.gz: f2fd3e85572bb37a67e243332ec161a35fd48587
   Image-ExifTool-9.70.tar.gz: 158fec94641049152ed235f10855d97914fbd0a5
-sources:
   Image-ExifTool-9.76.tar.gz: 79bfc6beab0bdff6aa59324434e576e20785a320
+sources:
+  Image-ExifTool-11.01.tar.gz: 530890c6af9c4eef09c52b253444e0d6df0b8101
