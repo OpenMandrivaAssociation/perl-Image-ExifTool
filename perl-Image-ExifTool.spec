@@ -6,7 +6,7 @@ Summary:	Read and write meta information
 Name:		perl-%{modname}
 Epoch:		1
 Version:	%perl_convert_version %{modver}
-Release:	4
+Release:	1
 License:	GPLv2
 Group:		Development/Perl
 Url:	http://search.cpan.org/dist/%{modname}
