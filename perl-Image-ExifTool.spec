@@ -1,19 +1,16 @@
 %define modname	Image-ExifTool
-%define modver 11.01
 
 Summary:	Read and write meta information
 
 Name:		perl-%{modname}
-Epoch:		1
-Version:	%perl_convert_version %{modver}
+Version:	12.60
 Release:	1
 License:	GPLv2
 Group:		Development/Perl
-Url:	http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Image/%{modname}-%{modver}.tar.gz
+Url:		http://search.cpan.org/dist/%{modname}
+Source0:	http://www.cpan.org/modules/by-module/Image/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
-Provides:	Image-ExifTool
 
 %description
 ExifTool provides an extensible set of perl modules to read and write meta
@@ -23,17 +20,17 @@ Casio, FujiFilm, JVC/Victor, Kodak, Leaf, Minolta/Konica-Minolta, Nikon,
 Olympus/Epson, Panasonic/Leica, Pentax/Asahi, Ricoh, Sanyo and Sigma/Foveon.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
+perl Makefile.PL INSTALLDIRS=vendor
 
 %build
-perl Makefile.PL INSTALLDIRS=vendor
-%make CFLAGS="%{optflags}} -DENGLISH"
+%make_build CFLAGS="%{optflags}} -DENGLISH"
 
 %check
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %{_bindir}/*
