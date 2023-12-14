@@ -3,7 +3,7 @@
 Summary:	Read and write meta information
 
 Name:		perl-%{modname}
-Version:	12.60
+Version:	12.70
 Release:	1
 License:	GPLv2
 Group:		Development/Perl
