@@ -3,7 +3,7 @@
 Summary:	Read and write meta information
 
 Name:		perl-%{modname}
-Version:	12.76
+Version:	13.59
 Release:	1
 License:	GPLv2
 Group:		Development/Perl
@@ -21,7 +21,7 @@ Casio, FujiFilm, JVC/Victor, Kodak, Leaf, Minolta/Konica-Minolta, Nikon,
 Olympus/Epson, Panasonic/Leica, Pentax/Asahi, Ricoh, Sanyo and Sigma/Foveon.
 
 %prep
-%autosetup -p1 -n %{modname}-%{version}
+%autosetup -p1 -n Image-ExifTool-13.55
 perl Makefile.PL INSTALLDIRS=vendor
 
 %build
