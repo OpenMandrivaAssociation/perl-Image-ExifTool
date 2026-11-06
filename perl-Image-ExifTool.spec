@@ -3,12 +3,12 @@
 Summary:	Read and write meta information
 
 Name:		perl-%{modname}
-Version:	13.59
+Version:	13.61
 Release:	1
 License:	GPLv2
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Image/%{modname}-%{version}.tar.gz
+Url:		https://exiftool.org/
+Source0:	https://downloads.sourceforge.net/project/exiftool/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -21,11 +21,11 @@ Casio, FujiFilm, JVC/Victor, Kodak, Leaf, Minolta/Konica-Minolta, Nikon,
 Olympus/Epson, Panasonic/Leica, Pentax/Asahi, Ricoh, Sanyo and Sigma/Foveon.
 
 %prep
-%autosetup -p1 -n Image-ExifTool-13.55
+%autosetup -p1 -n %{modname}-%{version}
 perl Makefile.PL INSTALLDIRS=vendor
 
 %build
-%make_build CFLAGS="%{optflags}} -DENGLISH"
+%make_build CFLAGS="%{optflags} -DENGLISH"
 
 %check
 make test
